@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <title>FitTrack</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- header section -->
+
+    <div class="register-form-container" id="registerForm">
+      <div class="register-form">
+        <span class="close-btn" id="closeRegister">&times;</span>
+        <h2>Register for FitTrack</h2>
+        <form
+          action="https://formsubmit.co/amankumawat3112@gmail.com"
+          method="POST"
+        >
+          <input type="text" name="Name" placeholder="Name" required />
+          <input type="number" name="Phone" placeholder="Phone" required />
+          <input type="email" name="Email" placeholder="Email" required />
+          <input
+            type="password"
+            name="Password"
+            placeholder="Password"
+            required
+          />
+          <input
+            type="hidden"
+            name="_subject"
+            value="New FitTrack Registration!"
+          />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" value="https://yourwebsite.com/thankyou.html" />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <header>
+      <div class="nav-content">
+        <div class="nav-logo">
+          <p>FitTrack</p>
+        </div>
+
+        <div class="nav-links">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#aboutUs">About Us</a></li>
+            <li><a href="#plans">Plans</a></li>
+            <li><a href="#review">Review</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-btn regrister">
+          <button>Register Now</button>
+        </div>
+
+        <div class="nav-menu">
+          <i class="fa-solid fa-bars" id="menu"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- main content -->
+
+    <main>
+      <!-- Home section -->
+      <div class="home" id="home" data-aos="zoom-in">
+        <div class="homeTxt">
+          <h1 id="fs-h1">Build Your</h1>
+          <h1 id="fs-h2">Dream Physique</h1>
+          <h1 id="fs-h3"><span class="multiple-text"></span></h1>
+          <p class="homePara">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo iusto
+            doloribus ullam corporis quibusdam laudantium dolorem eaque
+            repellendus natus necessitatibus.
+          </p>
+          <div class="join-btn regrister">
+            <button>Join Us</button>
+          </div>
+        </div>
+        <img src="Images/Home_img.png" alt="HomeImage" class="homeImg" />
+      </div>
+
+      <!-- services -->
+
+      <div class="services" id="services">
+        <h1 id="serviceh1" data-aos="zoom-in-down">
+          Our <span>Services</span>
+        </h1>
+
+        <div class="service-boxes" data-aos="zoom-in-up">
+          <div
+            class="exercise"
+            onclick="openService('Services/physical-fitness.html')"
+          >
+            <img src="Images/exercise1.jpg" alt="Ex-Image" />
+            <div class="exerciseName">Physical Fitness</div>
+          </div>
+          <div
+            class="exercise"
+            onclick="openService('Services/weight-gain.html')"
+          >
+            <img src="Images/exercise2.jpg" alt="Ex-Image" />
+            <div class="exerciseName">Weight Gain</div>
+          </div>
+          <div
+            class="exercise"
+            onclick="openService('Services/strength-training.html')"
+          >
+            <img src="Images/exercise3.jpg" alt="Ex-Image" />
+            <div class="exerciseName">Strength Training</div>
+          </div>
+          <div class="exercise" onclick="openService('Services/fat-lose.html')">
+            <img src="Images/exercise4.jpg" alt="Ex-Image" />
+            <div class="exerciseName">Fat Lose</div>
+          </div>
+          <div
+            class="exercise"
+            onclick="openService('Services/weightlifting.html')"
+          >
+            <img src="Images/exercise5.jpg" alt="Ex-Image" />
+            <div class="exerciseName">Weightlifting</div>
+          </div>
+          <div class="exercise" onclick="openService('Services/running.html')">
+            <img src="Images/exercise6.jpg" alt="Ex-Image" />
+            <div class="exerciseName">Running</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Us -->
+
+      <div class="aboutUs" id="aboutUs">
+        <div class="aboutUsImg">
+          <img
+            src="Images/aboutUs.png"
+            alt="About-us"
+            data-aos="zoom-in-down"
+          />
+        </div>
+        <div class="aboutUsTxt" data-aos="zoom-in-up">
+          <h1 class="l1">Why</h1>
+          <h1 class="l1" id="pd">Choose Us ?</h1>
+          <p class="p1">
+            Our diverse membership base creates a friendly and supportive
+            atmosphere, where you can make friends and stay motivated
+          </p>
+          <p class="p1">
+            Unlock your potential with our expert Personal Trainers.
+          </p>
+          <p class="p1">Elevate your fitness with practice sessions.</p>
+          <p class="p1">
+            We provide Supportive management, for your fitness success.
+          </p>
+          <a href="FreeTrial/bookclass.html" class="auBtn">Book A Free Class</a>
+        </div>
+      </div>
+
+      <!-- Plans -->
+
+      <div class="Ourplans" id="plans" data-aos="zoom-in">
+        <h1 class="oph" data-aos="zoom-in-down">Our <span>Plans</span></h1>
+
+        <div class="plans" data-aos="zoom-in-up">
+          <div class="plan">
+            <div class="planName">BASIC</div>
+            <div class="planPrice">$100/Month</div>
+            <ul class="planDetail">
+              <li>Smart Workout Plan</li>
+              <li>At Home workouts</li>
+            </ul>
+            <a href="#" class="planJoinBtn"
+              >Join Now <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="plan">
+            <div class="planName">PRO</div>
+            <div class="planPrice">$150/Month</div>
+            <ul class="planDetail">
+              <li>Pro GYMS</li>
+              <li>Smart workout plan</li>
+              <li>At Home workouts</li>
+            </ul>
+            <a href="#" class="planJoinBtn"
+              >Join Now <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="plan">
+            <div class="planName">PREMIUM</div>
+            <div class="planPrice">$300/Month</div>
+            <ul class="planDetail">
+              <li>ELITE Gyms & Classes</li>
+              <li>Pro GYMS</li>
+              <li>Smart Workout Plan</li>
+              <li>At Home workouts</li>
+              <li>Personal Training</li>
+            </ul>
+            <a href="#" class="planJoinBtn"
+              >Join Now <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment Box -->
+      <div class="payment-modal" id="paymentModal">
+        <div class="payment-box">
+          <span class="close-payment" id="closePayment">&times;</span>
+          <h2>Complete Your Payment</h2>
+          <p>Select your payment method:</p>
+          <div class="payment-options">
+            <button class="upi">Pay with UPI</button>
+            <button class="paytm">Pay with Paytm</button>
+            <button class="gpay">Pay with Google Pay</button>
+          </div>
+          <p class="payment-status"></p>
+        </div>
+      </div>
+
+      <!-- Reviews -->
+
+      <div class="clientReviews" id="review">
+        <h1 class="oph" data-aos="zoom-in-down">Client Reviews</h1>
+
+        <div class="reviews" data-aos="zoom-in-up">
+          <div class="review">
+            <div class="reviewerPhoto">
+              <img src="Images/client1.png" alt="Client" />
+            </div>
+            <div class="reviewerName">Prince</div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <div class="reviewerDesc">
+              FitTrack gave me the push I needed. Great plans, flexible
+              workouts, and real results in just weeks!
+            </div>
+          </div>
+
+          <div class="review">
+            <div class="reviewerPhoto">
+              <img src="Images/client2.png" alt="Client" />
+            </div>
+            <div class="reviewerName">Arishu</div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <div class="reviewerDesc">
+              Absolutely love FitTrack! The app keeps me motivated, and the
+              routines actually work for busy schedules
+            </div>
+          </div>
+
+          <div class="review">
+            <div class="reviewerPhoto">
+              <img src="Images/client3.png" alt="Client" />
+            </div>
+            <div class="reviewerName">Emily</div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="reviewerDesc">
+              Joined FitTrack last month — already seeing changes! The
+              personalized plans make a big difference.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BMI Checker -->
+
+      <div class="bmiChecker">
+        <div class="BMIinsideBox">
+          <div class="left" data-aos="zoom-in-right">
+            <h2>Check Your BMI</h2>
+            <input
+              type="number"
+              class="height wh"
+              placeholder="Your Height in cm"
+            />
+            <input type="number" class="weight wh" placeholder="Your Weight" />
+            <button class="calculate">Check BMI</button><br />
+            <p class="showBMI"></p>
+          </div>
+          <div class="right" data-aos="zoom-in-left">
+            <img src="Images/BMI-Image.png" alt="BMI Image" />
+          </div>
+        </div>
+      </div>
+
+      <!-- social Media links -->
+
+      <div class="socialMedia">
+        <a
+          href="https://www.youtube.com/@Engineering-student-o8d"
+          class="sm"
+          id="youTube"
+          target="_blank"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61560251601571"
+          class="sm"
+          id="facebook"
+          target="_blank"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/amankmwt_06/?next=%2F&hl=en"
+          class="sm"
+          id="instagram"
+          target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+
+      <div class="termConditions">© FitTrack 2025 - All Rights Reserved</div>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 300,
+        duration: 1400,
+      });
+    </script>
+  </body>
+</html>

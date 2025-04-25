@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book A Free Class</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background: #111;
+        color: #fff;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 60px auto;
+        padding: 30px;
+        background: #1c1c1c;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+      }
+
+      h1 {
+        text-align: center;
+        color: #00ff00;
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        margin-top: 15px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        background: #333;
+        color: white;
+        margin-bottom: 10px;
+        outline: none;
+      }
+
+      button {
+        width: 100%;
+        padding: 14px;
+        background: #00ff00;
+        color: #000;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      button:hover {
+        background: #00cc00;
+      }
+
+      .success-message {
+        display: none;
+        text-align: center;
+        color: #00ff00;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Book Your Free Class</h1>
+      <form id="bookingForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Username" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Mobile" required />
+
+        <label for="classType">Choose Class Type</label>
+        <select id="classType" required>
+          <option value="">Select</option>
+          <option value="Strength Training">Strength Training</option>
+          <option value="Cardio">Cardio</option>
+          <option value="Yoga">Yoga</option>
+          <option value="Zumba">Zumba</option>
+        </select>
+
+        <label for="message">Any Special Requests?</label>
+        <textarea
+          id="message"
+          rows="3"
+          placeholder="Any Special Requests"
+        ></textarea>
+
+        <button type="submit">Confirm Booking</button>
+      </form>
+
+      <div class="success-message" id="successMessage">
+        ✅ Your class has been booked! We'll contact you soon.
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById("bookingForm");
+      const successMessage = document.getElementById("successMessage");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        form.style.display = "none";
+        successMessage.style.display = "block";
+      });
+    </script>
+  </body>
+</html>
