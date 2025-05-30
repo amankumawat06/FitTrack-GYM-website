@@ -11,6 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="shortcut icon" href="Images/website_logo.png" type="png" />
 
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <title>FitTrack</title>
@@ -141,6 +142,78 @@
             <div class="exerciseName">Running</div>
           </div>
         </div>
+      </div>
+
+      <!-- Timing Schedule Section -->
+
+      <div class="timing-schedule" id="timing" data-aos="zoom-in-up">
+        <h1 class="oph">Gym <span>Timing Schedule</span></h1>
+        <div class="timing-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Morning Session</th>
+                <th>Evening Session</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monday</td>
+                <td>5:30 AM – 10:00 AM</td>
+                <td>4:30 PM – 9:00 PM</td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td>5:30 AM – 10:00 AM</td>
+                <td>4:30 PM – 9:00 PM</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>5:30 AM – 10:00 AM</td>
+                <td>4:30 PM – 9:00 PM</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td>5:30 AM – 10:00 AM</td>
+                <td>4:30 PM – 9:00 PM</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>5:30 AM – 10:00 AM</td>
+                <td>4:30 PM – 9:00 PM</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>6:00 AM – 9:00 AM</td>
+                <td>5:00 PM – 8:00 PM</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td colspan="2" style="color: red; font-weight: bold">
+                  Closed
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Exercises according to your Goal -->
+
+      <div class="exercise-schedule" id="exercisePlan" data-aos="zoom-in-up">
+        <h1 class="oph">Weekly <span>Exercise Plan</span></h1>
+
+        <div class="goal-selector">
+          <label for="goal">Select Your Goal:</label>
+          <select id="goal">
+            <option value="muscle">Muscle Gain</option>
+            <option value="weightLoss">Weight Loss</option>
+            <option value="stamina">Stamina Boost</option>
+          </select>
+        </div>
+
+        <div class="exercise-grid" id="exerciseGrid"></div>
       </div>
 
       <!-- About Us -->

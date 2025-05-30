@@ -145,3 +145,62 @@ function openService(url) {
     main.classList.remove("fade-out");
   }, 500);
 }
+
+  // Dynamic Exercises
+
+const plans = {
+  muscle: {
+    Monday: ["Bench Press", "Incline Dumbbell Press", "Cable Fly", "Push-ups"],
+    Tuesday: ["Lat Pulldown", "Barbell Row", "Cable Row", "Pull-Ups"],
+    Wednesday: ["Barbell Squats", "Leg Press", "Lunges", "Leg Curls"],
+    Thursday: ["Overhead Press", "Lateral Raise", "Front Raise", "Shrugs"],
+    Friday: ["Barbell Curl", "Hammer Curl", "Triceps Pushdown", "Skull Crushers"],
+    Saturday: ["Deadlift", "Plank", "Hanging Leg Raise", "Russian Twists"],
+    Sunday: "Rest"
+  },
+  weightLoss: {
+    Monday: ["20-min Treadmill", "Chest Press", "Push-Ups", "Mountain Climbers"],
+    Tuesday: ["15-min Cycle", "Lat Pulldown", "Barbell Row", "Crunches"],
+    Wednesday: ["Squats", "Step-ups", "Lunges", "15-min Stairmaster"],
+    Thursday: ["Shoulder Press", "Plank", "Bicycle Crunch", "Jump Rope"],
+    Friday: ["HIIT Circuit", "Barbell Curl", "Skaters", "Knee Tucks"],
+    Saturday: ["Full Body Circuit", "Pushups", "Jumping Jacks", "Cool Down Walk"],
+    Sunday: "Rest"  
+  },
+  stamina: {
+    Monday: ["Treadmill Run", "Squats", "Box Jumps", "Step-ups"],
+    Tuesday: ["Push-ups", "Pull-ups", "Shoulder Press", "Wall Balls"],
+    Wednesday: ["Plank", "Russian Twists", "Mountain Climbers", "Jump Rope"],
+    Thursday: ["Jump Squats", "Burpees", "Skaters", "Lunges"],
+    Friday: ["Deadlifts", "Battle Ropes", "Rowing Machine", "Rope Slams"],
+    Saturday: ["Kettlebell Swings", "Med Ball Slams", "Jump Rope", "Walk"],
+    Sunday: "Rest"
+  }
+};
+
+function showPlan(goal) {
+  const container = document.getElementById("exerciseGrid");
+  container.innerHTML = "";
+
+  for (const day in plans[goal]) {
+    const card = document.createElement("div");
+    card.className = "day-card";
+    card.innerHTML = `<h2>${day}</h2>`;
+
+    if (plans[goal][day] === "Rest") {
+      card.classList.add("rest");
+      card.innerHTML += `<p>Rest & Recovery</p>`;
+    } else {
+      const list = plans[goal][day].map(item => `<li>${item}</li>`).join("");
+      card.innerHTML += `<ul>${list}</ul>`;
+    }
+
+    container.appendChild(card);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const select = document.getElementById("goal");
+  showPlan(select.value);
+  select.addEventListener("change", () => showPlan(select.value));
+});
