@@ -189,7 +189,7 @@ function showPlan(goal) {
 
     if (plans[goal][day] === "Rest") {
       card.classList.add("rest");
-      card.innerHTML += `<p>Rest & Recovery</p>`;
+      card.innerHTML += `<p>Rest & Recovery 💤</p>`;
     } else {
       const list = plans[goal][day].map(item => `<li>${item}</li>`).join("");
       card.innerHTML += `<ul>${list}</ul>`;
