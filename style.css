@@ -115,7 +115,11 @@ body::-webkit-scrollbar-thumb {
   color: rgb(121, 238, 5);
 }
 
-.home, .services, .aboutUs, .Ourplans, .clientReviews {
+.home,
+.services,
+.aboutUs,
+.Ourplans,
+.clientReviews {
   transition: opacity 1s ease;
 }
 
@@ -379,7 +383,6 @@ main {
     transform: scale(0.9);
   }
 }
-    
 
 /* Responsive Services Section*/
 
@@ -430,8 +433,7 @@ main {
   }
 }
 
-
-  /* Timing Section */
+/* Timing Section */
 
 .timing-schedule {
   padding: 80px 100px;
@@ -489,19 +491,13 @@ main {
   }
 }
 
-    /* Exercises accoring to your Goal Section  */
-.exercise-schedule{
+/* Exercises accoring to your Goal Section  */
+.exercise-schedule {
   padding: 0 100px;
   margin: 0 0 20px 0;
 }
 
-@media(max-width:800px){
-  .exercise-schedule{
-    padding: 0 40px;
-  }
-}
-
-   .goal-selector {
+.goal-selector {
   margin: 20px 0;
   font-size: 18px;
 }
@@ -566,7 +562,12 @@ main {
 .day-card.rest h2 {
   color: red;
 }
- 
+
+@media (max-width: 800px) {
+  .exercise-schedule {
+    padding: 0 30px;
+  }
+}
 
 /* About Us Section*/
 
@@ -1089,7 +1090,7 @@ main {
   gap: 30px;
 }
 
-.socialMedia a{
+.socialMedia a {
   text-decoration: none;
 }
 
@@ -1116,7 +1117,7 @@ main {
   position: relative;
 }
 
-.sm:hover i{
+.sm:hover i {
   color: black;
   transition: 0.4s;
 }
