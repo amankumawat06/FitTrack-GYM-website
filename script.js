@@ -204,3 +204,13 @@ document.addEventListener("DOMContentLoaded", () => {
   showPlan(select.value);
   select.addEventListener("change", () => showPlan(select.value));
 });
+
+// Form inputs will be clear after submition
+
+const form = document.getElementById("registerFormElement");
+
+form.addEventListener("submit", () => {
+  setTimeout(() => {
+    form.reset();
+  }, 300);
+});
