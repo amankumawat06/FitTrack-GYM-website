@@ -1,8 +1,8 @@
-#About the Project📷
+**About the Project**📷
 
 FitTrack is a responsive and modern fitness website desiged to demonstrate complete GYM management and user Interaction features
 
-#Features ✨
+**Features**✨
 
 󠁯•󠁏󠁏 User Regristration
 
@@ -20,11 +20,11 @@ FitTrack is a responsive and modern fitness website desiged to demonstrate compl
 
 •󠁏󠁏 BMI calculator
 
-🌍 Visit the below link to see live updates -
+🌍 **Visit the below link to see live updates-**
 
 🔗 https://amankumawat06.github.io/FitTrack-GYM-website/
 
-These are the Technologies used in the project -
+**These are the Technologies used in the project -**
 
 🧱 HTML
 
